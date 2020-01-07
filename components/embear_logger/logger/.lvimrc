@@ -1,0 +1,6 @@
+" set makeprg to change directory in advance
+if (isdirectory(g:localvimrc_script_dir."/build"))
+  let &l:makeprg="cd ".g:localvimrc_script_dir."/build && make"
+else
+  let &l:makeprg="cd ".g:localvimrc_script_dir." && make"
+endif
